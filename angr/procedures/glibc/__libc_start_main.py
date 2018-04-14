@@ -130,7 +130,7 @@ class __libc_start_main(angr.SimProcedure):
 
         # TODO: __cxa_atexit calls for various at-exit needs
 
-        self.call(self.init, (self.argc, self.argv, self.envp), 'after_init')
+        self.call(self.main, (self.argc, self.argv, self.envp), 'after_main')
 
     def after_init(self, main, argc, argv, init, fini, exit_addr=0):
         if isinstance(self.state.arch, ArchAMD64):
