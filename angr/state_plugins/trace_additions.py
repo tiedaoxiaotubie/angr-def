@@ -732,8 +732,8 @@ class ZenPlugin(angr.state_plugins.SimStatePlugin):
 
         # setup the byte dict
         byte_dict = zen_plugin.byte_dict
-        for i, b in enumerate(state.cgc.flag_bytes):
-            var = list(b.variables)[0]
-            byte_dict[var] = {i}
+        #for i, b in enumerate(state.cgc.flag_bytes):
+            #var = list(b.variables)[0]
+            #byte_dict[var] = {i}
 
         state.preconstrainer.preconstraints.extend(zen_plugin.preconstraints)
